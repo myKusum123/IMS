@@ -1,0 +1,14 @@
+<!-- transaction_list.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Transactions{% endblock %}
+
+{% block content %}
+  <h2>Transactions</h2>
+  <ul>
+    {% for transaction in object_list %}
+      <li>{{ transaction.transaction_type }} - {{ transaction.item.name }} - Quantity: {{ transaction.quantity }} - Total Price: {{ transaction.totalPrice }} - Date: {{ transaction.date }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -1,0 +1,14 @@
+<!-- supplier_list.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Suppliers{% endblock %}
+
+{% block content %}
+  <h2>Suppliers</h2>
+  <ul>
+    {% for supplier in object_list %}
+      <li>{{ supplier.name }} - {{ supplier.phone_number }} - {{ supplier.email }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
